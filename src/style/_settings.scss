@@ -1,0 +1,27 @@
+$color1 : rgb(161, 152, 130);
+$color2 : rgb(194, 184, 163);
+$color3 : rgb(230, 221, 198);
+$color4 : rgb(254, 247, 220);
+$color5 : rgba(28, 28, 28, 0.753);
+
+@font-face {
+    font-family: font1;
+    src: url(../assets/fonts/RampartOne-Regular.ttf);
+}
+@font-face {
+    font-family: font2;
+    src: url(../assets/fonts/Kavivanar-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+        height: 100vh;
+        background: linear-gradient(45deg, $color2, $color4);
+        font-family: font2;
+        color: $color5;
+    }
+}

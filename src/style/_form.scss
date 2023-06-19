@@ -1,0 +1,58 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;  
+    justify-content: space-evenly;
+
+    h1 {
+        font-family: font1;
+        letter-spacing: 3px;
+        font-size: 2.5rem;
+        color: $color5;
+    }
+
+    form {
+        display: grid;
+        grid-gap: 10px;
+        margin-top: 15px;
+        padding: 10px;
+        border-width: 4px;
+        border-style: solid;
+        border-image:  linear-gradient(45deg, $color2, $color4) 1;
+        border-radius: 5px;
+        transition: 0.5s;
+        
+
+        input {
+            font-family: font2;
+            height: 25px;
+            padding: 3px;  
+            border: 2px solid $color3;
+            border-radius: 5px;
+            text-align: center;
+            
+            &:focus {
+                outline: none;
+            }
+        }
+        &:focus-within {
+            border-image:  linear-gradient(45deg, $color4, $color2) 1;
+        }
+
+        button {
+            height: 25px;  
+            padding: 5px; 
+            font-family: font2;
+            border-radius: 5px;
+            border: none;
+            background: linear-gradient(45deg, $color4, $color3);
+            box-shadow: 0px 0px 7px 1px $color2;
+            transition: 0.3s;
+            &:active {
+                transform: scale(99%);
+                box-shadow: 0px 0px 0px 1px $color2;
+            }
+        }
+    }
+}
