@@ -1,7 +1,6 @@
 import React from "react";
 
 const Main = ({ pokemon }) => {
-  console.log(pokemon);
 
   return (
     <div className="main">

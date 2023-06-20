@@ -5,6 +5,7 @@ import Main from "../components/Main";
 const Form = () => {
   const [pokeName, setPokeName] = useState("");
   const [pokemon, setPokemon] = useState("");
+  const [message, setMessage] = useState("");
   const handleInputChange = (event) => {
     setPokeName(event.target.value);
   };
@@ -12,8 +13,15 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const apiUrl = `https://api-pokemon-fr.vercel.app/api/v1/pokemon/${pokeName}`;
-    axios.get(apiUrl).then((res) => setPokemon(res.data));
+    axios
+      .get(apiUrl)
+      .then((res) => setPokemon(res.data))
+      .catch((err) => setMessage("Aucun pokemon trouvé"));
   };
+
+  setTimeout(() => {
+    setMessage("");
+  }, 2500);
 
   return (
     <div>
@@ -29,6 +37,7 @@ const Form = () => {
           />
           <button type="submit">Chercher</button>
         </form>
+        <span id="error">{message}</span>
       </div>
       <Main pokemon={pokemon} />
     </div>

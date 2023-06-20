@@ -4,6 +4,7 @@
     align-items: center;
     height: 250px;  
     justify-content: space-evenly;
+    position: relative;
 
     h1 {
         font-family: font1;
@@ -54,5 +55,10 @@
                 box-shadow: 0px 0px 0px 1px $color2;
             }
         }
+    }
+    #error {
+        position: absolute;
+        top: 250px;
+        color: rgba(255, 0, 0, 0.631);
     }
 }
